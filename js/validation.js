@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function checkAvailability(field, value, errorElement) {
         console.log(`Lancement de la requête pour ${field} avec valeur : ${value}`);
         const xhr = new XMLHttpRequest();
-        xhr.open('GET', `http://192.168.43.128/check_availability.php?${field}=${encodeURIComponent(value)}`, true);
+       xhr.open('GET', `http://localhost/check_availability.php?${field}=${encodeURIComponent(value)}`, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 console.log(`Réponse reçue pour ${field}, statut : ${xhr.status}, texte : ${xhr.responseText}`);
